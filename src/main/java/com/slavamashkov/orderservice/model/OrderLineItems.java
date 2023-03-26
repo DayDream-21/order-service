@@ -21,6 +21,7 @@ public class OrderLineItems {
     private String skuCode;
     private Integer quantity;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "order_id")
     private Order order;
 }

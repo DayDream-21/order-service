@@ -13,14 +13,14 @@ import java.math.BigDecimal;
 public class OrderLineItemsDto {
     private Long id;
     private String skuCode;
-    private BigDecimal orderNumber;
+    private BigDecimal price;
     private Integer quantity;
 
     public static OrderLineItems mapFromDto(OrderLineItemsDto orderLineItemsDto) {
         return OrderLineItems.builder()
-                .price(orderLineItemsDto.getOrderNumber())
+                .price(orderLineItemsDto.getPrice())
                 .quantity(orderLineItemsDto.getQuantity())
-                .skuCode(orderLineItemsDto.skuCode)
+                .skuCode(orderLineItemsDto.getSkuCode())
                 .build();
     }
 }

@@ -17,4 +17,9 @@ public class OrderController {
     public void placeOrder(@RequestBody OrderRequest orderRequest) {
         orderService.placeOrder(orderRequest);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteOrder(@PathVariable(name = "id") Long id) {
+        orderService.deleteOrderById(id);
+    }
 }
